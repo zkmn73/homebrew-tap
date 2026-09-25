@@ -1,6 +1,6 @@
 cask "simpleshot" do
-  version "1.1.0"
-  sha256 "036226e8a3c0c1015cda526dcdb3b8e82bb16839b7e73fb53b89e4560d24621d"
+  version "1.1.1"
+  sha256 "e3723bb9f92d379c5e5568161b2287a822cc4e056fe3a63b72bfb006756ecaff"
 
   url "https://github.com/zkmn73/SimpleShot/releases/download/v#{version}/SimpleShot.dmg"
   name "SimpleShot"
@@ -16,9 +16,8 @@ cask "simpleshot" do
 
   app "SimpleShot.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/SimpleShot.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/SimpleShot.app"]
   end
 
   caveats "This build is not notarized. Screen Recording permission must be granted again after each upgrade."
