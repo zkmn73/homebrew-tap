@@ -1,6 +1,6 @@
 cask "simpleshot" do
-  version "1.5.2"
-  sha256 "bb298df756ea55344059a17d22976a7df6e789603ffd6dff0ce50df734983073"
+  version "1.5.3"
+  sha256 "ee06c067502f5a27c9e01c130cffb063c92d671f72ef514fadf9d48d79e4b28b"
 
   url "https://github.com/zkmn73/SimpleShot/releases/download/v#{version}/SimpleShot.dmg"
   name "SimpleShot"
